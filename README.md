@@ -39,10 +39,10 @@ So let's make a call to this api and see what result it returns:
 
 ```javascript
 app.get('/users', (req, res) => {
-	axios
-		.get('https://jsonplaceholder.typicode.com/users')
-		.then(console.log)
-		.catch(console.log);
+axios
+	.get('https://jsonplaceholder.typicode.com/users')
+	.then(console.log)
+	.catch(console.log);
 });
 ```
 
@@ -50,13 +50,13 @@ It should show me a large response object. We are only interested in the `data` 
 
 ```javascript
 app.get('/users', (req, res) => {
-	axios
-		.get('https://jsonplaceholder.typicode.com/users')
-		.then((result) => {
-			const { data } = result;
-			res.json(data);
-		})
-		.catch(console.log);
+axios
+	.get('https://jsonplaceholder.typicode.com/users')
+	.then((result) => {
+		const { data } = result;
+		res.json(data);
+	})
+	.catch(console.log);
 });
 ```
 
